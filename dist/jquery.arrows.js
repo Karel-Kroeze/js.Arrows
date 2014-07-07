@@ -353,7 +353,8 @@
                 height: box.height,
                 style: "position: absolute;" +
                     " top: " + nudge.y + "px;" +
-                    " left: " + nudge.x + "px;"
+                    " left: " + nudge.x + "px;" +
+                    " pointer-events: none;"
             });
             return canvas;
         }
