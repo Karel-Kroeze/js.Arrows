@@ -4,7 +4,7 @@
     <title>Snap test</title>
     <script src="vendors/snap.svg.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="../assets/js/jquery.arrows.js"></script>
+    <script src="dist/jquery.arrows.js"></script>
 </head>
 <body style="background-color: rgb(168, 52, 38); margin: 0">
 <!--    <script>
@@ -27,43 +27,43 @@
         from: "tom",
         to: "bottom",
         style: "freehand",
-        arc: 0,
-        numLines: 80,
-        spread: 300,
+        arc: 50,
+        numLines: 4,
+        spread: 50,
+        lineStyle: {
+            stroke: "#eeeeee",
+            strokeWidth: "2px",
+            fill: "none"
+        }
+    });
+    $("#middle").arrow({
+        destiny: "#left",
+        from: "left",
+        to: "right",
+        style: "freehand",
+        arc: 50,
+        numLines: 5,
+        spread: 30,
+        lineStyle: {
+            stroke: "#000000",
+            strokeWidth: "2px",
+            fill: "none"
+        }
+    });
+    $("#right").arrow({
+        destiny: "#middle",
+        from: "left",
+        to: "right",
+        style: "freehand",
+        arc: 50,
+        numLines: 5,
+        spread: 30,
         lineStyle: {
             stroke: "#eeeeee",
             strokeWidth: "1px",
             fill: "none"
         }
     });
-    /*        $("#middle").arrow({
-     origin: "#left",
-     from: "left",
-     to: "right",
-     style: "freehand",
-     arc: 50,
-     numLines: 5,
-     spread: 30,
-     lineStyle: {
-     stroke: "#eeeeee",
-     strokeWidth: "1px",
-     fill: "none"
-     }
-     });*/
-//        $("#right").arrow({
-//            origin: "#middle",
-//            from: "left",
-//            to: "right",
-//            style: "freehand",
-//            arc: 50,
-//            numLines: 5,
-//            spread: 30,
-//            lineStyle: {
-//                stroke: "#eeeeee",
-//                strokeWidth: "1px",
-//                fill: "none"
-//            }
-//        });
     $("html").on("click", function (e) {
         console.log(e.target);
     })
@@ -100,6 +100,6 @@
     <a href="">Test mij!</a><a href="">Test mij!</a><a href="">Test mij!</a><a href="">Test mij!</a>
 </div>
 <div id="right"
-     style="position: absolute; right: 100px; top: 100px; width: 200px; height: 200px; border: 1px solid white; cursor: pointer;"></div>
+     style="position: absolute; right: 100px; top: 100px; width: 200px; height: 200px; border: 1px solid white;"></div>
 </body>
 </html>

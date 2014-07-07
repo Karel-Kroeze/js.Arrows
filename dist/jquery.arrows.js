@@ -280,7 +280,11 @@
          */
         function createCanvas() {
             var svgID = $(this).attr('id') + "-arrow";
-            if (opt.id) svgID = opt.id;
+            if (opt.id) {
+                svgID = opt.id;
+            } else {
+                svgID = Math.random().toString(36).replace(/[^a-z]+/g, '').substring(2,5);
+            }
             o.append("<svg id='" + svgID + "'></svg>");
             return Snap("#" + svgID);
         }
